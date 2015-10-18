@@ -1,8 +1,8 @@
-# JSON, UDP and latest erlang whistles
+# JSON, UDP and latest erlang/elixir whistles
 
 Preparing for code camp 2015.
 
-Trying out Erlang for UDP and JSON processing.
+Trying out Elixir for UDP and JSON processing.
 
 ## Pre-requisites
 
@@ -10,14 +10,12 @@ Erlang env (Rel 18 or better). Brew provides ok on OSX.
 
 Node (for the dummy server).
 
-## Compilation
+Elixir. brew installs fine.
 
-    make
-
-## Running
+## Buiding and running
 
 Run server and client in separate terminals.
 
     make run-server
-    make run-client
+    make run-client (will also fetch dependencies and compile)
     
