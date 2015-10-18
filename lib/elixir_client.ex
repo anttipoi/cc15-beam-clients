@@ -1,7 +1,7 @@
 defmodule ElixirClient do
 
-  @name "Planet Express"
-  @lobby_port 4567
+  @name Application.get_env(:elixir_client, :name)
+  @lobby_port Application.get_env(:elixir_client, :port)
   
   defp random_game_color(), do: "red"
 
