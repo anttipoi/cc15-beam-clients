@@ -1,4 +1,6 @@
-.erlang.mk/
-deps/
-ebin/
-beam-clients.d
+/cover
+/deps
+_build/
+erl_crash.dump
+*.ez
+mix.lock

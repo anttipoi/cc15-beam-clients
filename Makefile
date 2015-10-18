@@ -1,13 +1,15 @@
-PROJECT = beam-clients
-DEPS = jsx
-include erlang.mk
-
-PATH_OPTS = -pa ebin -pa deps/jsx/ebin
 
 run-server:
 	./server/lobby_test_server.js
 
-run-client:
-	ERL $(PATH_OPTS) -s erl_client start -s erlang halt -noshell
+run-client: deps/jsx/README.md
+	mix run -e ElixirClient.run_client
 
-.PHONY: run-server run-client
+deps/jsx/README.md:
+	mix deps.get
+
+dist-clean:
+	mix clean
+	mix deps.clean --all
+
+.PHONY: run-server run-client dist-clean
